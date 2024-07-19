@@ -30,10 +30,6 @@ class WiFiInfoPage extends StatefulWidget {
 
 class _WiFiInfoPageState extends State<WiFiInfoPage> {
   String? _publicIP;
-  String? _wifiSSID;
-  String? _wifiBSSID;
-  String? _wifiIP;
-  String? _wifiSignalStrength;
 
   @override
   void initState() {
@@ -68,11 +64,7 @@ class _WiFiInfoPageState extends State<WiFiInfoPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text('Public IP: $_publicIP'),
-              const SizedBox(height: 10),
-              Text('WiFi SSID: $_wifiSSID'),
-              Text('WiFi BSSID: $_wifiBSSID'),
-              Text('WiFi IP: $_wifiIP'),
-              Text('WiFi Signal Strength: $_wifiSignalStrength'),
+              const SizedBox(height: 10)
             ],
           ),
           actions: [
@@ -99,10 +91,6 @@ class _WiFiInfoPageState extends State<WiFiInfoPage> {
           children: <Widget>[
             Text('Public IP: $_publicIP'),
             const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: _showWiFiInfo,
-              child: const Text('Get Wi-Fi Info'),
-            ),
           ],
         ),
       ),
